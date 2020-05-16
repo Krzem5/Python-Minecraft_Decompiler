@@ -1,6 +1,6 @@
-import requests
-import os
 import ntpath
+import os
+import requests
 import urllib.request
 import zipfile
 
