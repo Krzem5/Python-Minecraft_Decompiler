@@ -44,4 +44,5 @@ with open(f"./tmp/{TYPE.split(':')[1].lower()}_mappings.txt","r") as f:
 		if (l[0]=="#"):
 			continue
 		else:
+			pass
 			###
