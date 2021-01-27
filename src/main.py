@@ -1,4 +1,3 @@
-import ntpath
 import os
 import requests
 import urllib.request
@@ -20,7 +19,7 @@ json=[e for e in requests.get("https://launchermeta.mojang.com/mc/game/version_m
 print(f"Downloading {json['type']} {json['id']} ({json['releaseTime']})...")
 json=requests.get(json["url"]).json()
 print(f"{TYPE.split(':')[1].title()} url: {json['downloads'][TYPE.split(':')[1].lower()]['url']}...\n{TYPE.split(':')[1].title()} mapping url: {json['downloads'][TYPE.split(':')[1].lower()+'_mappings']['url']}...\nCreating temporary folder...")
-if (ntpath.exists("tmp")):
+if (os.path.exists("tmp")):
 	os.system("rm -rf tmp")
 os.mkdir("tmp")
 os.mkdir(f"tmp/{TYPE.split(':')[1].lower()}")
